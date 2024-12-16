@@ -1,0 +1,26 @@
+# Development files
+.git
+.github
+.gitignore
+.eslintrc
+.prettierrc
+.vscode
+.idea
+*.log
+*.lock
+*.tgz
+
+# Source files
+src
+tests
+examples
+docs
+
+# Configuration files
+tsconfig.json
+tsconfig.*.json
+vite.config.ts
+tsup.config.ts
+
+# Build artifacts
+coverage

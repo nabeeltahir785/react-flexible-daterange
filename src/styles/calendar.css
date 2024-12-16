@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .calendar-container {
+    @apply bg-white rounded-lg shadow-sm p-4;
+  }
+  
+  .calendar-header {
+    @apply text-lg font-semibold mb-4;
+  }
+  
+  .calendar-weekday {
+    @apply text-sm font-medium text-gray-500;
+  }
+  
+  .calendar-date {
+    @apply transition-all duration-150 ease-in-out;
+  }
+  
+  .calendar-date-selected {
+    @apply bg-blue-500 text-white;
+  }
+  
+  .calendar-date-disabled {
+    @apply text-gray-300 cursor-not-allowed;
+  }
+}
