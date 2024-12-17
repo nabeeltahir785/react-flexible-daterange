@@ -1,6 +1,6 @@
 {
   "name": "@nabeeltahir785/react-flexible-daterange",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A flexible date range picker for React with multiple range selection support",
   "type": "module",
   "main": "./dist/index.js",
