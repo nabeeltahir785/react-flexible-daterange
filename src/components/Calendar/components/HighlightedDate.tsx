@@ -2,14 +2,12 @@ import React from 'react';
 import { Tooltip } from './Tooltip';
 
 interface HighlightedDateProps {
-  date: Date;
   color?: string;
   tooltip?: string;
   children: React.ReactNode;
 }
 
 export const HighlightedDate: React.FC<HighlightedDateProps> = ({
-  date,
   color,
   tooltip,
   children,

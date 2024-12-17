@@ -19,7 +19,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "composite": true
+    "composite": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["src"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx", "dist"]

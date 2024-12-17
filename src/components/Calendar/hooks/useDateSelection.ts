@@ -8,7 +8,6 @@ export function useDateSelection(
   value: DateRange[],
   onChange: (ranges: DateRange[]) => void,
   maxDays: number,
-  onRemoveRange: (id: string) => void
 ) {
   const [hoverDate, setHoverDate] = useState<Date | null>(null);
   const [activeRange, setActiveRange] = useState<DateRange | null>(null);

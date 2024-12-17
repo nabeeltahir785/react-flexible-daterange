@@ -1,4 +1,3 @@
-import React from 'react';
 import { MonthCalendar } from './components/MonthCalendar';
 import { addMonths } from './utils/dateCalculations';
 import type { CalendarProps } from './types';
@@ -18,7 +17,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     handleDateClick, 
     handleMouseEnter,
     handleMouseLeave 
-  } = useDateSelection(value, onChange, maxDays, onRemoveRange);
+  } = useDateSelection(value, onChange, maxDays);
 
   return (
     <div>
@@ -75,7 +74,7 @@ export const Calendar: React.FC<CalendarProps> = ({
                   {range.startDate?.toLocaleDateString()} - {range.endDate?.toLocaleDateString()}
                 </span>
                 <button
-                  onClick={() => onRemoveRange(range.id)}
+                    onClick={() => onRemoveRange?.(range.id)}
                   className="text-gray-400 hover:text-red-500 transition-colors"
                   aria-label="Remove date range"
                 >

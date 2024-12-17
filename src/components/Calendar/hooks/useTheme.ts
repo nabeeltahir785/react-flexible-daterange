@@ -3,15 +3,25 @@ import { CalendarTheme } from '../types';
 import { defaultTheme } from '../utils/defaultTheme';
 import { twMerge } from 'tailwind-merge';
 
+const defaultTransition = {
+  duration: 'duration-200',
+  timing: 'ease-in-out'
+};
+
 export function useTheme(theme?: Partial<CalendarTheme>) {
   return useMemo(() => {
     const merged = {
       colors: { ...defaultTheme.colors, ...theme?.colors },
       sizes: { ...defaultTheme.sizes, ...theme?.sizes },
-      animations: { ...defaultTheme.animations, ...theme?.animations },
+      animations: {
+        transition: {
+          ...defaultTransition,
+          ...defaultTheme.animations?.transition,
+          ...theme?.animations?.transition
+        }
+      },
       className: { ...defaultTheme.className, ...theme?.className },
     };
-
     return {
       container: twMerge(
         'bg-white rounded-lg shadow-sm',

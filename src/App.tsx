@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Calendar } from './components/Calendar/Calendar';
-import { X } from 'lucide-react';
 import type { DateRange } from './components/Calendar/types';
 
 function App() {
